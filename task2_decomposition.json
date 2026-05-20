@@ -1,0 +1,759 @@
+[
+    {
+        "question": "List all products",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get all customers",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "customers"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Show all orders",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List all employees",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get all offices",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "offices"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Show all product lines",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "productlines"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List all payments",
+        "decomposition": {
+            "intent": "List all records",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "*"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get product names and prices",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productName",
+                "buyPrice"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get customer names and cities",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "customers"
+            ],
+            "columns": [
+                "customerName",
+                "city"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List employee first and last names",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "firstName",
+                "lastName"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get all order dates",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "orderDate"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Show product vendor list",
+        "decomposition": {
+            "intent": "List unique column values",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productVendor"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get all product codes",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productCode"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List all countries from offices",
+        "decomposition": {
+            "intent": "List unique column values",
+            "tables": [
+                "offices"
+            ],
+            "columns": [
+                "country"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Show all order statuses",
+        "decomposition": {
+            "intent": "List unique column values",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "status"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get all payment amounts",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "amount"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List all job titles",
+        "decomposition": {
+            "intent": "List unique column values",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "jobTitle"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get customer phone numbers",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "customers"
+            ],
+            "columns": [
+                "customerName",
+                "phone"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Show product MSRP values",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productName",
+                "MSRP"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "List order numbers",
+        "decomposition": {
+            "intent": "List specific columns",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "orderNumber"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Get orders with customer names",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "orders",
+                "customers"
+            ],
+            "columns": [
+                "orderNumber",
+                "customerName"
+            ],
+            "filters": [],
+            "joins": [
+                "orders.customerNumber = customers.customerNumber"
+            ]
+        }
+    },
+    {
+        "question": "Get employees with office city",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "employees",
+                "offices"
+            ],
+            "columns": [
+                "firstName",
+                "lastName",
+                "city"
+            ],
+            "filters": [],
+            "joins": [
+                "employees.officeCode = offices.officeCode"
+            ]
+        }
+    },
+    {
+        "question": "Get payments with customer names",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "payments",
+                "customers"
+            ],
+            "columns": [
+                "amount",
+                "customerName"
+            ],
+            "filters": [],
+            "joins": [
+                "payments.customerNumber = customers.customerNumber"
+            ]
+        }
+    },
+    {
+        "question": "Get order details with product names",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "orderdetails",
+                "products"
+            ],
+            "columns": [
+                "orderNumber",
+                "productName",
+                "quantityOrdered"
+            ],
+            "filters": [],
+            "joins": [
+                "orderdetails.productCode = products.productCode"
+            ]
+        }
+    },
+    {
+        "question": "Get products with product line description",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "products",
+                "productlines"
+            ],
+            "columns": [
+                "productName",
+                "textDescription"
+            ],
+            "filters": [],
+            "joins": [
+                "products.productLine = productlines.productLine"
+            ]
+        }
+    },
+    {
+        "question": "Get customers with sales rep names",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "customers",
+                "employees"
+            ],
+            "columns": [
+                "customerName",
+                "firstName",
+                "lastName"
+            ],
+            "filters": [],
+            "joins": [
+                "customers.salesRepEmployeeNumber = employees.employeeNumber"
+            ]
+        }
+    },
+    {
+        "question": "Get orders with customer city",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "orders",
+                "customers"
+            ],
+            "columns": [
+                "orderNumber",
+                "city"
+            ],
+            "filters": [],
+            "joins": [
+                "orders.customerNumber = customers.customerNumber"
+            ]
+        }
+    },
+    {
+        "question": "Get employees and their manager",
+        "decomposition": {
+            "intent": "Self join and list",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "empName",
+                "managerName"
+            ],
+            "filters": [],
+            "joins": [
+                "employees.reportsTo = employees.employeeNumber"
+            ]
+        }
+    },
+    {
+        "question": "Get orderdetails with product vendor",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "orderdetails",
+                "products"
+            ],
+            "columns": [
+                "orderNumber",
+                "productVendor"
+            ],
+            "filters": [],
+            "joins": [
+                "orderdetails.productCode = products.productCode"
+            ]
+        }
+    },
+    {
+        "question": "Get payments with customer country",
+        "decomposition": {
+            "intent": "Join and list",
+            "tables": [
+                "payments",
+                "customers"
+            ],
+            "columns": [
+                "amount",
+                "country"
+            ],
+            "filters": [],
+            "joins": [
+                "payments.customerNumber = customers.customerNumber"
+            ]
+        }
+    },
+    {
+        "question": "Count customers per country",
+        "decomposition": {
+            "intent": "Group and count",
+            "tables": [
+                "customers"
+            ],
+            "columns": [
+                "country",
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total payments per customer",
+        "decomposition": {
+            "intent": "Group and sum",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "customerNumber",
+                "SUM(amount)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Number of orders per status",
+        "decomposition": {
+            "intent": "Group and count",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "status",
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Products per product line",
+        "decomposition": {
+            "intent": "Group and count",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productLine",
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Employees per office",
+        "decomposition": {
+            "intent": "Group and count",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "officeCode",
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total stock per product vendor",
+        "decomposition": {
+            "intent": "Group and sum",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productVendor",
+                "SUM(quantityInStock)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Average buy price per product line",
+        "decomposition": {
+            "intent": "Group and average",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productLine",
+                "AVG(buyPrice)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Orders per customer",
+        "decomposition": {
+            "intent": "Group and count",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "customerNumber",
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Max MSRP per product line",
+        "decomposition": {
+            "intent": "Group and max",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productLine",
+                "MAX(MSRP)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Min buy price per vendor",
+        "decomposition": {
+            "intent": "Group and min",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "productVendor",
+                "MIN(buyPrice)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total number of customers",
+        "decomposition": {
+            "intent": "Count total",
+            "tables": [
+                "customers"
+            ],
+            "columns": [
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total number of products",
+        "decomposition": {
+            "intent": "Count total",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total revenue from payments",
+        "decomposition": {
+            "intent": "Sum total",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "SUM(amount)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Average product price",
+        "decomposition": {
+            "intent": "Average",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "AVG(buyPrice)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Max payment amount",
+        "decomposition": {
+            "intent": "Max",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "MAX(amount)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Min payment amount",
+        "decomposition": {
+            "intent": "Min",
+            "tables": [
+                "payments"
+            ],
+            "columns": [
+                "MIN(amount)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Count total orders",
+        "decomposition": {
+            "intent": "Count total",
+            "tables": [
+                "orders"
+            ],
+            "columns": [
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Total quantity in stock",
+        "decomposition": {
+            "intent": "Sum total",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "SUM(quantityInStock)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Average MSRP",
+        "decomposition": {
+            "intent": "Average",
+            "tables": [
+                "products"
+            ],
+            "columns": [
+                "AVG(MSRP)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    },
+    {
+        "question": "Number of employees",
+        "decomposition": {
+            "intent": "Count total",
+            "tables": [
+                "employees"
+            ],
+            "columns": [
+                "COUNT(*)"
+            ],
+            "filters": [],
+            "joins": []
+        }
+    }
+]
